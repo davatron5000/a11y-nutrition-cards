@@ -1,0 +1,23 @@
+<div id="{{ item.title | slugify }}" class="card">
+    <header class="title">
+      <small>Component Name</small>
+      <!-- <h2><a href="{{ item.url }}">{{ item.title }}</a></h2> -->
+      <h2>{{ item.title }}</h2>
+      <p>{{ item.description }}</p>
+    </header>
+    
+    <div class="keys">
+      <small>Keyboard Expectations</small>
+      {{ item.keyboard | markdownify }}
+    </div>
+  
+    <div class="focus">
+      <small>Focus Expectations</small>
+      {{ item.focus | markdownify }}
+    </div>
+  
+    <div class="label">
+      <small>Labelling Expectations</small>
+      {{ item.labelling | markdownify }}
+    </div>
+</div>

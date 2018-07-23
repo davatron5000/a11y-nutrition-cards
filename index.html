@@ -1,0 +1,37 @@
+---
+layout: default
+title: Nutrition Cards for Accessible Components
+description: A11Y Expectations is an attempt to digest and simplify the accessibility expectations when it comes to component authoring. Based on the <a href="https://w3c.github.io/aria-practices/">WAI ARIA Authoring Practices Guide</a>
+---
+
+<ul>
+{% for item in site.components %}
+    <li><a href="#{{ item.title | slugify }}">{{ item.title }}</a></li>
+{% endfor %}
+</ul>
+
+{% for item in site.components %}
+    <div id="{{ item.title | slugify }}" class="card">
+        <header class="title">
+          <small>Component Name</small>
+          <h2><a href="{{ item.url }}">{{ item.title }}</a></h2>
+          <!-- <h2>{{ item.title }}</h2> -->
+          <p>{{ item.description }}</p>
+        </header>
+        
+        <div class="keys">
+          <small>Keyboard Expectations</small>
+          {{ item.keyboard | markdownify }}
+        </div>
+      
+        <div class="focus">
+          <small>Focus Expectations</small>
+          {{ item.focus | markdownify }}
+        </div>
+      
+        <div class="label">
+          <small>Labelling Expectations</small>
+          {{ item.labelling | markdownify }}
+        </div>
+    </div>
+{% endfor %}

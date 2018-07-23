@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{{ page.title }} A11Y Expectations</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Open+Sans+Condensed:700" rel="stylesheet">     {% capture style %}
+    * {
+        box-sizing: border-box;
+    }
+
+    img {
+        max-width: 100%;
+    }
+
+    body {
+        font-family: 'Open Sans', sans-serif;
+        padding: 2%;
+    }
+
+    body > * {
+        margin: 0 auto 2em;
+        max-width: 75em;
+        width: 100%;
+    }
+
+    @media(min-width: 50em) {
+        body > header {
+            padding-right: 40%;
+            position: relative;
+            
+            img {
+                position: absolute;
+                right: 0;
+                top: 0;
+                width: 40%;
+                z-index: -1;
+            }
+        }
+    }
+
+    .card {
+        margin-bottom: 2em;
+        border: 5px solid #000;
+        transition: background 0.15s ease-out;
+        background-color: #fff;
+        
+        display: grid;
+        grid-template-areas:    "title"
+                                "focus"
+                                "label"
+                                "keys";
+
+        @media(min-width: 50em) {
+            grid-template-columns: 2fr 1fr;
+            grid-template-areas:    "title keys"
+                                    "focus keys"
+                                    "label keys";
+        }
+
+        &:target {
+            background-color: #ffffef;
+        }
+    }
+    
+    h1, h2, h3 {
+        font-family: 'Open Sans Condensed', sans-serif;
+        margin: 0;
+    }
+
+    h1 {
+        font-size: 3em;
+        line-height: 1;
+    }
+    h2 {
+        font-size: 2.4em;
+        line-height: 1;
+    }
+
+    p, li {
+        max-width: 72ch;
+    }
+
+    a {
+        color: #06c;
+    }
+    
+    .title {
+        grid-area: title;
+        border-bottom: 5px solid #000;
+        padding: 1em;
+    }
+    
+    .focus {
+        border-bottom: 5px solid #000;
+        grid-area: focus;
+        padding: 1em;
+    }
+    
+    .label {
+        padding: 1em;
+        grid-area: label;
+    }
+    
+    .keys {
+        padding: 1em;
+        grid-area: keys;
+
+        border-top: 5px solid #000;
+
+        @media(min-width: 50em) {
+            border-top: 0;
+            border-left: 5px solid #000;
+        }
+    }
+    
+    ul {
+        padding-left: 1.2em;
+    }
+    
+    li {
+        margin-bottom: 8px;
+    }
+    
+    kbd {
+        display: inline-block;
+        vertical-align: center;
+        padding: 2px 4px;
+        border: 1px solid #000;
+        box-shadow: 0 2px 0 2px #ccc;
+        border-radius: 2px;
+    }
+    
+    code {
+        color: red;
+    }
+   {% endcapture %}
+   <style>{{ style | scssify | strip_newlines }}</style>
+</head>
+<body>
+    <header>
+        <h1>{{ page.title }}</h1>
+        <img src="/img/pig.png" alt="Diagram of the different cuts of a pig"/>
+        {{ page.description | markdownify }}
+    </header>
+
+    <main>
+        {{ content }}
+    </main>
+    
+    <footer>
+        <p>&copy;2018</p>
+    </footer>
+</body>
+</html>
