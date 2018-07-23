@@ -14,7 +14,7 @@ description: A11Y Expectations is an attempt to digest and simplify the accessib
     <div id="{{ item.title | slugify }}" class="card">
         <header class="title">
           <small>Component Name</small>
-          <h2><a href="{{ item.url }}">{{ item.title }}</a></h2>
+          <h2><a href="{{ item.url | relative_url }}">{{ item.title }}</a></h2>
           <!-- <h2>{{ item.title }}</h2> -->
           <p>{{ item.description }}</p>
         </header>

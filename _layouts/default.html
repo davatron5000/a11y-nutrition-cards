@@ -141,7 +141,7 @@
 <body>
     <header>
         <h1>{{ page.title }}</h1>
-        <img src="/img/pig.png" alt="Diagram of the different cuts of a pig"/>
+        <img src="{{ 'img/pig.png' | relative_url }}" alt="Diagram of the different cuts of a pig"/>
         {{ page.description | markdownify }}
     </header>
 
