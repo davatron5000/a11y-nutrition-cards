@@ -4,7 +4,7 @@ title: Nutrition Cards for Accessible Components
 description: A11Y Nutrition Cards is an attempt to digest and simplify the accessibility expectations when it comes to component authoring. Based on the <a href="https://w3c.github.io/aria-practices/">WAI ARIA Authoring Practices Guide</a>.
 ---
 
-<ul>
+<ul class="subnav">
 {% for item in site.components %}
     <li><a href="#{{ item.title | slugify }}">{{ item.title }}</a></li>
 {% endfor %}

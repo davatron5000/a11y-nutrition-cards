@@ -15,5 +15,7 @@ labelling: |
     - The active <code>tab</code> has <a class="state-reference" href="https://www.w3.org/TR/wai-aria-1.1/#aria-selected">aria-selected</a> set to <code>true</code> and all other <code>tab</code> elements have it set to <code>false</code>.
     - Each <code>tabpanel</code> has the property <a class="property-reference" href="https://www.w3.org/TR/wai-aria-1.1/#aria-labelledby">aria-labelledby</a> referring to its associated <code>tab</code>. 
 focus: |
-    - Tabs should activate automatically when receiving focus as long as their associated tab panels are displayed without noticeable latency.
+    - Tabs should activate automatically when receiving focus as long as associated tab panels are rendered quickly.
+    - Tabs should have visible `:focus` state.
+    - Tabs should have visible `aria-selected="true"` state
 ---
