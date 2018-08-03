@@ -15,10 +15,12 @@ Thank you very much for your interest in this project. While I won't be prompt, 
 
 ## Building Locally
 
-The site is built with Jekyll and deployed via `gh-pages`. Not sure if it's the best path but leveraging Jekyll's Collections feature to organize components. If you'd like to help contribute locally...
+The site is built with [Jekyll](https://jekyllrb.com/) (you'll need Ruby to run Jekyll) and deployed via Github Pages. Not sure if it's the best path but leveraging Jekyll's Collections feature to organize components. If you'd like to help contribute locally...
 
 ```
 git clone git@github.com:davatron5000/a11y-nutrition-cards.git
-bundle install
-bundle exec jekyll serve --livereload
+gem install jekyll
+jekyll serve --livereload
 ```
+
+To add a new component, create a new file in the `_components/` folder.
