@@ -10,7 +10,7 @@ keyboard: |
     - <kbd>Home</kbd> (Optional) = Focus first Menu item
     - <kbd>End</kbd> (Optional) = Focus last Menu item
 labelling: |
-    - Menu Button should use [button](https://w3c.github.io/aria/#button) element to activate the menu (e.g. `<button>`).
+    - Menu Button should use role [button](https://w3c.github.io/aria/#button) and use a button element to activate the menu (e.g. `<button>`).
     - Menu Button has [aria-haspopup](https://w3c.github.io/aria/#aria-haspopup) set to `true`.
     - Menu has role [menu](https://w3c.github.io/aria/#menu).
     - When menu is visible, button has [aria-expanded](https://w3c.github.io/aria/#aria-expanded) set to `true`. When menu is hidden, it is set to `false`.
