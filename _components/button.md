@@ -1,7 +1,8 @@
 ---
 title: Button
 layout: component
-description: 
+description:
+example: https://codepen.io/hankchizljaw/full/pZYxGy
 keyboard: |
     - <kbd>Enter</kbd> or <kbd>Space</kbd> = Activate Button
 labelling: |
