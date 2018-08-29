@@ -2,7 +2,7 @@
 title: Tabs
 layout: component
 keyboard: |
-    - <kbd>Space</kbd> of <kbd>Enter</kbd> = Activate Tab
+    - <kbd>Space</kbd> or <kbd>Enter</kbd> = Activate Tab
     - <kbd>&larr;</kbd><kbd>&rarr;</kbd> = Cycles tab focus
     - <kbd>&uarr;</kbd><kbd>&darr;</kbd> = Cycles tab focus (vertical tabs)
     - <kbd>Home</kbd> = Focus first tab
